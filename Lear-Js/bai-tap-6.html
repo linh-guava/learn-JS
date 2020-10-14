@@ -1,0 +1,22 @@
+<!--bài tập 6-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>            
+                var a = prompt("nhập số bất kì");
+                a=parseInt(a);
+                    for (var i = 2; i < a-1; i++) {
+                        if (a % i == 0){
+                            alert(a+" không phải là số nguyên tố");
+                            break;
+                        }
+                        else{
+                            alert(a + " là số nguyên tố");
+                            break;
+                        }
+                    }
+        </script>
+    </body>
+</html>
