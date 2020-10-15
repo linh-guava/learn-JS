@@ -3,28 +3,31 @@
 </head>
 <body>
     Enter Number
-    <input id="number">
-    <button type="button" onclick="myFunction()">Submit</button>
-
-    <p id="demo"></p>
+    <input type="number" id="so">
+    <button type="button" onclick="kiem_tra_snt()" class="gui">Print Result</button>
+    <p id="result"></p>
+    <p id="SNT"></p>
 
     <script>
-    function myFunction() {
-        var i,a;
-
-    i = document.getElementById("number").value;
-        for (i = 2; i < a-1; i++) {
-            if (a % i == 0){
-                document.write(a+" không phải là số nguyên tố");
-                break;
+        function kiem_tra_snt(n) {
+            var i = 0;
+            var a = 0;
+            var primeNumbers = "";
+            var n = document.getElementById("so").value;
+            for (i = 1; i <= n; i++) {
+                var counter = 0;
+                for (a = i; a >= 1; a--) {
+                if (i % a == 0) {
+                    counter = counter + 1;
+                }
+                }
+                if (counter == 2) {
+                primeNumbers = primeNumbers + i + " ";
+                }
             }
-            else{
-                document.write(a + " là số nguyên tố");
-                break;
+            document.getElementById("result").innerHTML = "SNT  1 to " + n + " la:";
+            document.getElementById("SNT").innerHTML = primeNumbers;
             }
-        }
-        document.write(a);
-    }
     </script>
 
 </body>
